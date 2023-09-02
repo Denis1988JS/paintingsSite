@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<main class="main_block">
+	<h2 class="h2_header_title">Личный кабинет пользователя {{user.username}}</h2>
+	<nav class="nav_user_profile">
+		<ul class="nav_list_profile">
+			<li><a href="{% url 'changeUserInfo' %}">Изменить личные данные</a></li>
+			<li><a href="{% url 'сhangePasswordUser' %}">Поменять пароль</a></li>
+			<li><a href="{% url 'cart' %}">Корзина</a></li>
+		</ul>
+	</nav>
+</main>
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock content %}

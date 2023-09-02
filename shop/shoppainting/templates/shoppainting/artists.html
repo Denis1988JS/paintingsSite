@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="main_block_employees">
+	<h2 class="h2_header_title">Наши художники</h2>
+	{% for artist in artists%}
+	<div class="employes_block">
+		<div class="left_employes_block">
+			<img src="{{ artist.employee_avatar.url }}" alt="Нет фото">
+			<h3>{{artist.JobTitle}}</h3>
+			<p><a href="{{ artist.get_absolute_url }}">{{artist.second_name}} {{artist.name}} {{artist.thirt_name}}</a></p>
+			<p><a href="tel:{{emp.phone_number}}">Телефон {{artist.phone_number}}</a> </p>
+			<p></p>
+		</div>
+		<div class="right_employes_block">
+			<p>{{artist.employee_content}}</p>
+		</div>
+	</div>
+	<hr>
+	{% endfor %}
+</section>
+</main>
+{% endblock content %}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="main_block_employees">
+	<h2 class="h2_header_title">Наша команда</h2>
+	{% for emp in employees%}
+	<div class="employes_block">
+		<div class="left_employes_block">
+			<img src="{{ emp.employee_avatar.url }}" alt="Нет фото">
+			<h3>{{emp.JobTitle}}</h3>
+			<p><a href="{{ emp.get_absolute_url }}">{{emp.second_name}} {{emp.name}} {{emp.thirt_name}}</a></p>
+			<p><a href="tel:{{emp.phone_number}}">Телефон {{emp.phone_number}}</a> </p>
+			<p></p>
+		</div>
+		<div class="right_employes_block">
+			<p>{{emp.employee_content}}</p>
+		</div>
+	</div>
+	<hr>
+	{% endfor %}
+</section>
+</main>
+{% endblock content %}

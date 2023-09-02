@@ -1,0 +1,188 @@
+/*-------------------адаптив точка 770px------------*/
+
+
+/*Шапка адаптив 770px*/
+@media screen and (max-width: 840px) {
+	.header__nav a{
+	color: #2C2D35;
+	margin-left: 10px;
+	font-size: 14px;
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+}
+/*Блок с птичкой - адаптив 770px*/
+@media screen and (max-width: 840px) {
+	.intro_block_left img{
+	width: 330px;
+	height: 380px;
+}
+.intro_block_right h2 {
+	padding-top: 35px;
+	color: #2C2D35;
+	font-size: 40px;
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 110%;
+}
+.intro_block_right span {
+	color: rgba(89, 141, 102, 1);
+	font-size: 40px;
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 110%;
+}
+.intro_block_right p {
+	padding-top: 20px;
+	color: #86928B;
+	font-size: 18px;
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 150%;
+}
+.intro_block_right button {
+	margin-top: 0px;
+	padding: 20px 60px;
+	border: 1px solid #598D66;
+	color: rgba(89, 141, 102, 1);
+	font-size: 20px;
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+}
+/*Блок Главный контент сайта - адаптив 770px*/
+@media screen and (max-width: 770px) {
+.main_block_painting {
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 30px;
+	margin-top: 30px;
+}
+.main_block_header_left h2{
+	color: #2C2D35;
+	font-size: 30px;
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 110%;
+}
+.change_country {
+	margin-left: 16px;
+	padding: 10px 20px;
+	border-radius: 20px;
+	background: #376B44;
+	color: #F4F6F5;
+	font-size: 20px;
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+.cart {
+	max-width: 320px;
+	max-height: 730px;
+	background: #E1EDE6;
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.main_block_painting {
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 30px;
+}
+.cart img{
+	max-width: 290px;
+}
+}
+/*Блок о новой коллекции адаптив 770px*/
+@media screen and (max-width: 770px) {
+.new_collection {
+	display: flex;
+	width: 100%;
+	margin: 0px auto;
+	background-image: url('../img/rectangle.png');
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: center center;
+	object-fit: cover;
+	padding-top: 60px;
+}
+.new_collection_content_header {
+	width: 70%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.title h2 {
+	color: #F4F6F5;
+	font-size: 30px;
+	font-family: Raleway;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 100%;
+}
+.new_collection_block {
+	max-width: 1140px;
+	margin: 0px auto;
+	display: flex;
+	flex-direction: column;
+}
+}
+/*Наша команда адаптив 770px*/
+@media screen and (max-width: 770px) {
+.our_comand {
+	max-width: 1140px;
+	margin: 0px auto;
+	padding: 70px 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 30px;
+}
+}
+/*Подвал сайта адаптив 770px - footer*/
+@media screen and (max-width: 770px) {
+	.footer__content {
+		max-width: 1140px;
+		margin: 0px auto;
+		padding: 23px 15px;
+		display: block;
+	}
+	.left_block_footer{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.dooble_block_footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 0px;
+}
+}
+/*Адаптив 770px*/
+@media screen and (max-width: 770px) {
+	.cart_block_by_country {
+	margin: 30px auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+}
+}
+
+

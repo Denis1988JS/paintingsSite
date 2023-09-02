@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% load static %}
+{% block content %}
+<main class="main_block">
+	<h2 class="h2_header_title">Корзина покупок {{request.user.username}}</h2>
+	<section class="main_block_cart_center">
+		{% if cart %}
+		<table>
+			<thead>
+				<tr>
+				<th colspan="2">Картина</th>
+				<th>Цена</th>
+				<th>Количество</th>
+				<th>Итого</th>
+				<th>Удалить</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for item in cart %}
+				<tr>
+					<td>
+						<img src="{{ item.imagePainting.url }}" alt="Нет фото" class="small">
+					</td>
+					<td>
+						{{item.painting}}
+					</td>
+					<td>
+						{{item.price}}
+					</td>
+					<td>
+						{{item.quantity}}
+					</td>
+					<td>
+						{{item.total_price}}
+					</td>
+					<td>
+						<a href="{% url 'cart_remove' item.id %}">
+							Удалить
+							{{item.remove}}
+						</a>
+					</td>
+				</tr>
+			{% endfor %}
+			<tr>
+				<td>Итого</td>
+				<td></td>
+				<td></td>
+				<td>Товаров {{cart.get_total_len}} ед.</td>
+				<td>Сумма {{cart.get_total_price}}</td>
+				<td><a href="#">Оформить заказ</a></td>
+			</tr>
+			</tbody>
+
+		</table>
+		{% else %}
+		<h2 class="text-warning text-center">Ваша корзина покупок пуста</h2>
+		{% endif %}
+	</section>
+</main>
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock content %}

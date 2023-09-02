@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="main_block_employees">
+	<div class="employes_block">
+		<div class="left_employes_block">
+			<img src="{{ employee.employee_avatar.url }}" alt="Нет фото">
+			<h3>{{employee.JobTitle}}</h3>
+			<p>{{employee.second_name}} {{employee.name}} {{employee.thirt_name}}</p>
+			<p><a href="tel:{{emp.phone_number}}">Телефон {{employee.phone_number}}</a> </p>
+			<p></p>
+		</div>
+		<div class="right_employes_block">
+			<p>{{employee.employee_content}}</p>
+		</div>
+	</div>
+	<hr>
+</section>
+</main>
+{% endblock content %}

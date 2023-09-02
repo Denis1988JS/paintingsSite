@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+	<main class="main_block">
+		<h2 class="h2_header_title">Последние 10 новинок</h2>
+		<section class="main_block_painting">
+			{% for paint in newPaintings %}
+			<div class="cart">
+				<a href="{{ paint.get_absolute_url }}">
+					<img src="{{ paint.imagePainting.url }}" alt="Нет фото">
+				</a>
+	
+				<p class="autor_painting">{{ paint.autor }}</p>
+				<h3 class="name_painting">{{ paint.name }}</h3>
+				<p class="format_painting">{{ paint.formPaint }}</p>
+				<h3 class="price_painting">{{ paint.price }}</h3>
+				<form action="{% url 'add_cart' paint.id %}" method="post">
+					{{ cart_product_form }}
+					{% csrf_token %}
+					<input type="submit" class="card_painting" value="В корзину">
+				</form>
+			</div>
+			{% endfor %}
+		</section>
+	</main>
+{% endblock content %}

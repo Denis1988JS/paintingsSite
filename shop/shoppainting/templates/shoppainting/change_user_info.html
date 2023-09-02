@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% load static %}
+{% block content %}
+<main class="main_block">
+	<h2 class="h2_header_title">Изменения данных пользователя</h2>
+	<section class="main_block_form">
+		<form method="POST" enctype="multipart/form-data">
+			{% csrf_token %}
+			{% bootstrap_form form %}
+			<button type="submit" class="btn btn-primary">Изменить данные</button>
+		</form>
+	</section>
+</main>
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock content %}
